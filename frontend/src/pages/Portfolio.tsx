@@ -17,7 +17,7 @@ import {
   Card,
   CardContent
 } from '@mui/material';
-import Grid from '@mui/material/Unstable_Grid2'; // Using Grid2 instead of Grid
+import { unstable_Grid as Grid } from '@mui/system';
 import { PieChart, Pie, Cell, ResponsiveContainer, Tooltip } from 'recharts';
 
 import { fetchPortfolios } from '../store/slices/portfolioSlice';

@@ -6,12 +6,11 @@ import CssBaseline from '@mui/material/CssBaseline';
 import Layout from './components/layout/Layout';
 
 // Pages
-import Dashboard from './pages/Dashboard';
-import AIChat from './pages/AIChat';
-import ActionLog from './pages/ActionLog';
-import Portfolio from './pages/Portfolio';
+import Dashboard from './pages/Dashboard.tsx';
+import AIChat from './pages/AIChat.tsx';
+import ActionLog from './pages/ActionLog.tsx';
+import Portfolio from './pages/Portfolio.tsx';
 
-// Create theme
 const theme = createTheme({
   palette: {
     primary: {

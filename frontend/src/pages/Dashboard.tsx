@@ -16,7 +16,7 @@ import {
   ListItemText,
   CircularProgress
 } from '@mui/material';
-import Grid from '@mui/material/Unstable_Grid2'; // Using Grid2 instead of Grid
+import { unstable_Grid as Grid } from '@mui/system';
 import SearchIcon from '@mui/icons-material/Search';
 import OpenInNewIcon from '@mui/icons-material/OpenInNew';
 
