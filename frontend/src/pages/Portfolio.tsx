@@ -17,7 +17,7 @@ import {
   Card,
   CardContent
 } from '@mui/material';
-import { unstable_Grid as Grid } from '@mui/system';
+import Grid from '@mui/system/Grid';
 import { PieChart, Pie, Cell, ResponsiveContainer, Tooltip } from 'recharts';
 
 import { fetchPortfolios } from '../store/slices/portfolioSlice';
@@ -84,10 +84,13 @@ const Portfolio: React.FC = () => {
       <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', mb: 3 }}>
         <Typography variant="h6">Portfolio</Typography>
       </Box>
-      
       {/* Portfolio summary cards */}
       <Grid container spacing={3} sx={{ mb: 4 }}>
-        <Grid xs={12} md={4}>
+        <Grid
+          size={{
+            xs: 12,
+            md: 4
+          }}>
           <Card variant="outlined">
             <CardContent>
               <Typography variant="subtitle2" color="text.secondary" gutterBottom>
@@ -100,7 +103,11 @@ const Portfolio: React.FC = () => {
           </Card>
         </Grid>
         
-        <Grid xs={12} md={4}>
+        <Grid
+          size={{
+            xs: 12,
+            md: 4
+          }}>
           <Card variant="outlined">
             <CardContent>
               <Typography variant="subtitle2" color="text.secondary" gutterBottom>
@@ -113,7 +120,11 @@ const Portfolio: React.FC = () => {
           </Card>
         </Grid>
         
-        <Grid xs={12} md={4}>
+        <Grid
+          size={{
+            xs: 12,
+            md: 4
+          }}>
           <Card variant="outlined">
             <CardContent>
               <Typography variant="subtitle2" color="text.secondary" gutterBottom>
@@ -126,13 +137,16 @@ const Portfolio: React.FC = () => {
           </Card>
         </Grid>
       </Grid>
-      
       {/* Asset allocation chart */}
       <Paper elevation={0} sx={{ p: 3, mb: 4 }}>
         <Typography variant="h6" sx={{ mb: 2 }}>Asset Allocation</Typography>
         
         <Grid container spacing={2}>
-          <Grid xs={12} md={4}>
+          <Grid
+            size={{
+              xs: 12,
+              md: 4
+            }}>
             <ResponsiveContainer width="100%" height={200}>
               <PieChart>
                 <Pie
@@ -157,7 +171,11 @@ const Portfolio: React.FC = () => {
             </ResponsiveContainer>
           </Grid>
           
-          <Grid xs={12} md={8}>
+          <Grid
+            size={{
+              xs: 12,
+              md: 8
+            }}>
             <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 1 }}>
               {allocationData.map((item) => (
                 <Chip
@@ -174,7 +192,6 @@ const Portfolio: React.FC = () => {
           </Grid>
         </Grid>
       </Paper>
-      
       {/* Assets table */}
       <Paper elevation={0} sx={{ p: 3 }}>
         <Typography variant="h6" sx={{ mb: 2 }}>Assets</Typography>

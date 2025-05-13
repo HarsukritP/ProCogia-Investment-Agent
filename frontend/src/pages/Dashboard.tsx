@@ -16,7 +16,7 @@ import {
   ListItemText,
   CircularProgress
 } from '@mui/material';
-import { unstable_Grid as Grid } from '@mui/system';
+import Grid from '@mui/system/Grid';
 import SearchIcon from '@mui/icons-material/Search';
 import OpenInNewIcon from '@mui/icons-material/OpenInNew';
 
@@ -114,7 +114,11 @@ const Dashboard: React.FC = () => {
     <Box sx={{ paddingY: 2 }}>
       <Grid container spacing={3}>
         {/* Stock search section */}
-        <Grid xs={12} md={8}>
+        <Grid
+          size={{
+            xs: 12,
+            md: 8
+          }}>
           <Paper sx={{ p: 3, height: '100%', mb: 3 }} elevation={0}>
             <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', mb: 2 }}>
               <Typography variant="h6">Stocks</Typography>
@@ -186,7 +190,11 @@ const Dashboard: React.FC = () => {
         </Grid>
         
         {/* Trending section */}
-        <Grid xs={12} md={4}>
+        <Grid
+          size={{
+            xs: 12,
+            md: 4
+          }}>
           <Paper sx={{ p: 3, height: '100%', mb: 3 }} elevation={0}>
             <Typography variant="h6" sx={{ mb: 2 }}>Trending Stocks and News</Typography>
             
@@ -232,7 +240,11 @@ const Dashboard: React.FC = () => {
         </Grid>
         
         {/* AI Recommended Actions section */}
-        <Grid xs={12} md={6}>
+        <Grid
+          size={{
+            xs: 12,
+            md: 6
+          }}>
           <Paper sx={{ p: 3, height: '100%' }} elevation={0}>
             <Typography variant="h6" sx={{ mb: 2 }}>AI Recommended Actions</Typography>
             
@@ -270,7 +282,11 @@ const Dashboard: React.FC = () => {
         </Grid>
         
         {/* Your Portfolio section */}
-        <Grid xs={12} md={6}>
+        <Grid
+          size={{
+            xs: 12,
+            md: 6
+          }}>
           <Paper sx={{ p: 3, height: '100%' }} elevation={0}>
             <Typography variant="h6" sx={{ mb: 2 }}>Your Portfolio</Typography>
             
